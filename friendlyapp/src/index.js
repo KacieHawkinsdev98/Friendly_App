@@ -1,8 +1,8 @@
 import reactDom from 'react-dom';
 import App from './components/App';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 reactDom.render(
     <React.StrictMode>
