@@ -10,19 +10,16 @@ const signup = (email, username, password) => {
   });
 };
 
-const loginUser = (username, password) => {
-    return axios
-      .post(Base_URL + "signin", {
-        username,
-        password,
-      })
-      .then((response) => {
-        if (response.data.accessToken) {
-          localStorage.setItem("user", JSON.stringify(response.data));
-        }
-  
-        return response.data;
-      });
+const login = async (username, password) => {
+    const response = await axios
+        .post(Base_URL + "signin", {
+            username,
+            password,
+        });
+    if (response.data.accessToken) {
+        localStorage.setItem("user", JSON.stringify(response.data));
+    }
+    return response.data;
   };
 
 
@@ -36,7 +33,7 @@ const loginUser = (username, password) => {
   
   export default {
     signup,
-    loginUser,
+    login,
     logout,
     getCurrentUser,
   };

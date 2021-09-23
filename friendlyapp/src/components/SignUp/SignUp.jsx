@@ -1,4 +1,5 @@
 // import React, { useRef, useState } from 'react';
+import "./SignUp.css";
 import { Form, Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import React, { Component } from 'react';
@@ -53,12 +54,15 @@ class Signup extends Component {
     }
 
     render(){
+        
         return (
-    <>
+    <div>
       <Card>
           <Card.Body>
               <Form>
               <h2 className= "text-center mb-4" >Sign Up</h2>
+              
+             
               <Form.Group id="firstname">
                       <Form.Label>First Name</Form.Label>
                       <Form.Control type="text" 
@@ -67,6 +71,8 @@ class Signup extends Component {
                       
                       />
                   </Form.Group>
+                  
+                  
                   <Form.Group id="lastname">
                  <Form.Label>Last Name</Form.Label>
                  <Form.Control type="text" 
@@ -105,7 +111,7 @@ class Signup extends Component {
        <div className= "w-100 text-center mt-2">
           Already have an account? <Link to="/login"> Log In</Link>
          </div>
-       </>
+       </div>
     )}
 }
 

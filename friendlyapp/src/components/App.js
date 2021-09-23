@@ -1,6 +1,6 @@
 import React from 'react';
-import Signup from './SignUp/SignUp';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Signup from './SignUp/SignUp';
 import { Container } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ProfilePage from "./ProfilePage/ProfilePage";
@@ -18,9 +18,9 @@ function App() {
     <Router>
      
    <Switch>
-       <Route exact path="/" component={ProfilePage} />
+       <Route exact path="/" component={LoginPage} />
        <Route path="/signup" component={Signup} />
-       <Route path="/login" component={LoginPage}/>
+       <Route path="/profile" component={ProfilePage}/>
    </Switch>
   
     </Router>
