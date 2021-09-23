@@ -58,50 +58,49 @@ class Signup extends Component {
         return (
     <div>
       <Card>
-          <Card.Body>
-              <Form>
+          <Card.Body> 
               <h2 className= "text-center mb-4" >Sign Up</h2>
-              
+              <Form onSubmit={this.handleSubmit}>
              
-              <Form.Group id="firstname">
+                    <Form.Group >
                       <Form.Label>First Name</Form.Label>
                       <Form.Control type="text" 
                       onChange={this.handleChange}
-                      value={this.state.firstName} 
+                      value={this.firstName} 
                       
                       />
                   </Form.Group>
                   
                   
-                  <Form.Group id="lastname">
+                  <Form.Group >
                  <Form.Label>Last Name</Form.Label>
                  <Form.Control type="text" 
                   onChange={this.handleChange}
-                  value={this.state.lastName}
+                  value={this.lastName}
                  
                   />
                   </Form.Group>
-                 <Form.Group id="email">
+                 <Form.Group >
                  <Form.Label>Email</Form.Label>
                   <Form.Control type="email" 
                   onChange={this.handleChange}
-                  value={this.state.emailAddress}
+                  value={this.emailAddress}
                   
                   />
                 </Form.Group>
-                   <Form.Group id="username">
+                   <Form.Group >
                   <Form.Label>Username</Form.Label>
                   <Form.Control type="username" 
                       onChange={this.handleChange}
-                      value={this.state.userName}
+                      value={this.userName}
                       
                   />
                   </Form.Group>
-                   <Form.Group id="password">
+                   <Form.Group>
                       <Form.Label>Password</Form.Label>
                       <Form.Control type="password" 
                       onChange={this.handleChange}
-                      value={this.state.password}
+                      value={this.password}
                   />
                   </Form.Group>
                   <Button className= "w-100" type="submit">Sign Up</Button>
