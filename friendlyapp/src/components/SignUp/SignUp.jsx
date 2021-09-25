@@ -108,19 +108,23 @@ class Signup extends Component {
         </Card.Body>
     </Card>
        <div className= "w-100 text-center mt-2">
-          Already have an account? <Link to="/login"> Log In</Link>
+          Already have an account? <Link to="/"> Log In</Link>
+          <div>
+<Button className= "w-100" type= "submit" onClick={() =>
+ console.log(localStorage.getItem("token"))}>Click for Token!</Button>
+</div>
          </div>
        </div>
     )}
 }
 
+
+
 export default Signup; 
 
 
 //this is for token confirmation
-//   <div>
-//    <Button className= "w-100" type= "submit" onClick={() => console.log(localStorage.getItem("token"))}>Click for Token!</Button>
-//    </div>
+
 
 // Signup Hooks Option
 
